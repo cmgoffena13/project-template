@@ -1,8 +1,7 @@
-import logging
-
+import structlog
 from src.logging_conf import setup_logging
 
-logger = logging.getLogger("src")
+logger = structlog.getLogger("src")
 
 
 def main() -> None:
