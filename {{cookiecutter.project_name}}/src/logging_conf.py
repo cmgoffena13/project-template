@@ -92,11 +92,13 @@ def setup_logging():
             "filters": ["trace_context"],
         }
 
+    fmt = "%(asctime)s - %(levelname)s - %(filename)s:%(funcName)s:%(lineno)d - %(message)s"
+
     formatters = {
         "console": {
             "class": "logging.Formatter",
             "datefmt": "%Y-%m-%dT%H:%M:%S",
-            "format": "%(asctime)s - %(filename)s:%(funcName)s:%(lineno)d - %(message)s",
+            "format": fmt,
         }
     }
 
