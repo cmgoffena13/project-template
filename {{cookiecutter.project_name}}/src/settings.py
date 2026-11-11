@@ -48,7 +48,7 @@ class BaseConfig(BaseSettings):
 # Store all environment variables that can be accessed globally
 class GlobalConfig(BaseConfig):
     LOG_LEVEL: LogLevel = "INFO"
-    SERVICE_NAME: str = "modern-python-project-template"
+    SERVICE_NAME: str = "{{ cookiecutter.project_name }}"
     OPEN_TELEMETRY_TRACE_ENDPOINT: HttpUrl | None = None
     OPEN_TELEMETRY_LOG_ENDPOINT: HttpUrl | None = None
     OPEN_TELEMETRY_AUTHORIZATION_TOKEN: str | None = None
